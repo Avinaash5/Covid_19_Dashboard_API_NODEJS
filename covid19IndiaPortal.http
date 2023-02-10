@@ -1,0 +1,74 @@
+###Register User
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "name": "Christopher Phillips",
+  "password": "christy@123",
+  "gender":"Male",
+  "location":"Texas"
+}
+
+### Login
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+
+###GET All States
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY5MjAzMTc2fQ.IUyINxj-05Sz4neubI-f_WwXCA8b-Rxr1OHlSVq4lSA
+
+
+###GET State
+GET http://localhost:3000/states/8/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY5MjAzMTc2fQ.IUyINxj-05Sz4neubI-f_WwXCA8b-Rxr1OHlSVq4lSA
+
+
+### ADD District
+POST http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY5MjAzMTc2fQ.IUyINxj-05Sz4neubI-f_WwXCA8b-Rxr1OHlSVq4lSA
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+
+### GET District
+GET http://localhost:3000/districts/765
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY5MjAzMTc2fQ.IUyINxj-05Sz4neubI-f_WwXCA8b-Rxr1OHlSVq4lSA
+
+
+### Delete district
+DELETE http://localhost:3000/districts/765 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY5MjAzMTc2fQ.IUyINxj-05Sz4neubI-f_WwXCA8b-Rxr1OHlSVq4lSA
+
+
+###
+PUT http://localhost:3000/districts/760
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY5MjAzMTc2fQ.IUyINxj-05Sz4neubI-f_WwXCA8b-Rxr1OHlSVq4lSA
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###GET STATS with StateId
+GET http://localhost:3000/states/5/stats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY5MjAzMTc2fQ.IUyINxj-05Sz4neubI-f_WwXCA8b-Rxr1OHlSVq4lSA
